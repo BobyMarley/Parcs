@@ -1,0 +1,324 @@
+/* USER VARIABLES SECTION */
+
+:root {
+	--accent: #0994D2;
+	--text: #353535;
+	--regular-text: 16px;
+	--lineheight: 1.65;
+	--userfont: "Roboto-Regular", sans-serif;
+	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+	--normal:"Roboto-Regular", sans-serif;
+  	--medium:"Roboto-Medium", sans-serif;
+  	--bold:"Roboto-Bold", sans-serif;
+	scroll-behavior: smooth;
+}
+
+/* BOOTSTRAP SETTINGS SECTION */
+
+/* gutter 20px (10px + 10px). Comment this code for default gutter start at 1.5rem (24px) wide. */
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl { --bs-gutter-x: .625rem; }
+.row, .row > * { --bs-gutter-x: 1.25rem; }
+
+
+/* GENERAL CSS SETTINGS */
+
+::placeholder { color: #666; }
+::selection { background-color: var(--accent); color: #fff; }
+input, textarea { outline: none; }
+input:focus:required:invalid, textarea:focus:required:invalid { border-color: red; }
+input:required:valid, textarea:required:valid { border-color: green; }
+
+body {
+	font-family: var(--userfont);
+	font-size: var(--regular-text);
+	line-height: var(--lineheight);
+	color: var(--text);
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;
+}
+
+/* USER STYLES */
+
+.image {
+	max-width: 100%;
+	margin-bottom: var(--bs-gutter-x);
+	border-radius: 4px;
+}
+
+.accent {
+	color: var(--accent);
+	font-weight: bold;
+}
+
+.header {
+	transition: all 0.5s;
+	z-index: 997;
+	padding: 13px;
+	height:75px;
+	background-color:#1c1b1b;
+	}
+  .header.header-scrolled {
+	background: #fff;
+	padding: 15px 0;
+	box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+  }
+  .header .logo {
+	line-height: 0;
+  }
+  .header .logo img {
+	max-height: 40px;
+	margin-right: 6px;
+  }
+  .header .logo span {
+	font-size: 30px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	color: #012970;
+	font-family: "Nunito", sans-serif;
+	margin-top: 3px;
+  }
+  
+  /*--------------------------------------------------------------
+  # Navigation Menu
+  --------------------------------------------------------------*/
+  /**
+  * Desktop Navigation 
+  */
+  .navbar {
+	padding: 0;
+	
+  }
+  .navbar ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	list-style: none;
+	align-items: center;
+  }
+  .navbar li {
+	position: relative;
+	  }
+  .navbar a, .navbar a:focus {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	text-decoration: none;
+	padding: 10px 0 10px 30px;
+	font-size: 1rem;
+	font-weight: 300;
+	color: #fff;
+	white-space: nowrap;
+	transition: 0.3s;	
+	}
+  .navbar a i, .navbar a:focus i {
+	font-size: 12px;
+	line-height: 0;
+	margin-left: 5px;
+  }
+  .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+	color: #4154f1;
+	}
+  .navbar .getstarted, .navbar .getstarted:focus {
+	background: var(--accent);
+	padding: 8px 50px;
+	margin-left: 10px;
+	border-radius: 37px;
+	color: #fff;
+	}
+  .navbar .getstarted:hover, .navbar .getstarted:focus:hover {
+	color: #fff;
+	background: #5969f3;
+  }
+  .navbar .facebook {
+	padding: 8px 20px;
+	margin-left: 30px;
+	height:40px;
+	}
+  
+ 
+@media (max-width: 1366px) {
+	.navbar .dropdown .dropdown ul {
+	  left: -90%;
+	}
+	.navbar .dropdown .dropdown:hover > ul {
+	  left: -100%;
+	}
+  }
+  
+  /**
+  * Mobile Navigation 
+  */
+  .mobile-nav-toggle {
+	color: #012970;
+	font-size: 28px;
+	cursor: pointer;
+	display: none;
+	line-height: 0;
+	transition: 0.5s;
+  }
+  .mobile-nav-toggle.bi-x {
+	color: #fff;
+  }
+  
+  @media (max-width: 991px) {
+	.mobile-nav-toggle {
+	  display: block;
+	}
+  
+	.navbar ul {
+	  display: none;
+	}
+  }
+  .navbar-mobile {
+	position: fixed;
+	overflow: hidden;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: #1c1b1b;
+	transition: 0.3s;
+  }
+  .navbar-mobile .mobile-nav-toggle {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+  }
+  .navbar-mobile ul {
+	display: block;
+	position: absolute;
+	top: 55px;
+	right: 15px;
+	bottom: 15px;
+	left: 15px;
+	padding: 10px 0;
+	border-radius: 10px;
+	background-color: #fff;
+	overflow-y: auto;
+	transition: 0.3s;
+  }
+  .navbar-mobile a, .navbar-mobile a:focus {
+	padding: 10px 20px;
+	font-size: 15px;
+	color: #012970;
+  }
+  .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+	color: #4154f1;
+  }
+  .navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
+	margin: 15px;
+  }
+  .navbar-mobile .dropdown ul {
+	position: static;
+	display: none;
+	margin: 10px 20px;
+	padding: 10px 0;
+	z-index: 99;
+	opacity: 1;
+	visibility: visible;
+	background: #fff;
+	box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  }
+  .navbar-mobile .dropdown ul li {
+	min-width: 200px;
+  }
+  .navbar-mobile .dropdown ul a {
+	padding: 10px 20px;
+  }
+  .navbar-mobile .dropdown ul a i {
+	font-size: 12px;
+  }
+  .navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
+	color: #4154f1;
+  }
+  .navbar-mobile .dropdown > .dropdown-active {
+	display: block;
+  }
+  
+
+  /*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+	width: 100%;
+	height: 100vh;
+	background: url(/assets/img/header-bg.webp) top center no-repeat;
+	background-size: cover;
+	}
+  .hero h1 {
+	margin: 0;
+	margin-top: 30px;
+	font-size: 150px;
+	font-weight: 300;
+	line-height: 1;
+	color: var(--accent);
+	text-align: right;
+	}
+  .hero h2 {
+	color: #000;
+	/* margin: 15px 0 0 0; */
+	font-size: 30px;
+	text-align: right;
+	}
+  .hero .btn-get-started {
+	  float:right;
+	background: var(--accent);
+    padding: 8px 95px;
+    margin-left: 10px;
+	height:75px;
+	font-weight: 300;
+	text-decoration: none;
+    border-radius: 37px;
+    color: #fff;
+	transition: 0.5s;
+	color: #fff;
+	
+	box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
+	}
+  .hero .btn-get-started span {
+	font-size: 36px;
+  }
+  .hero .btn-get-started i {
+	margin-left: 5px;
+	font-size: 18px;
+	transition: 0.3s;
+  }
+  .hero .btn-get-started:hover i {
+	transform: translateX(5px);
+  }
+  .hero .hero-img {
+	text-align: right;
+  }
+  @media (min-width: 1024px) {
+	.hero {
+	  background-attachment: fixed;
+	}
+  }
+  @media (max-width: 991px) {
+	.hero {
+	  height: auto;
+	  padding: 120px 0 60px 0;
+	}
+	.hero .hero-img {
+	  text-align: center;
+	  margin-top: 80px;
+	}
+	.hero .hero-img img {
+	  width: 80%;
+	}
+  }
+  @media (max-width: 768px) {
+	.hero {
+	  text-align: center;
+	}
+	.hero h1 {
+	  font-size: 32px;
+	}
+	.hero h2 {
+	  font-size: 24px;
+	}
+	.hero .hero-img img {
+	  width: 100%;
+	}
+  }
