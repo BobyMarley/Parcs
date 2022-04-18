@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <base href="/">
+  <title>PARCS flight field</title>
+  <meta name="description" content="PARCS flight field">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="icon" href="images/favicon.png">
+  <meta property="og:image" content="images/preview.jpg">
+  <link rel="stylesheet" href="assets/css/bulma/bulma.css">
+  <link rel="stylesheet" href="assets/css/main.css?ver=222">
+  <link rel="stylesheet" href="assets/css/weather.css">
+
+  <style>
+    @font-face {
+      font-family: 'Roboto-Regular';
+      font-display: swap;
+      src: local('Roboto-Regular'), url('assets/fonts/Roboto-Regular-subset.woff2') format('woff2');
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: 'Roboto-Medium';
+      font-display: swap;
+      src: local('Roboto-Medium'), url('assets/fonts/Roboto-Medium-subset.woff2') format('woff2');
+      font-weight: 500;
+    }
+
+    @font-face {
+      font-family: 'Roboto-Bold';
+      font-display: swap;
+      src: local('Roboto-Bold'), url('assets/fonts/Roboto-Bold-subset.woff2') format('woff2');
+      font-weight: 700;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header id="header" class="fixed-top d-flex align-items-center">
+
+    <div class="container">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item logo" href="#">
+            <img src="/assets/img/logo.svg" alt="PARCS flight field">
+          </a>
+
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+            data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item pad-2">Field Weather</a>
+            <a class="navbar-item pad-2">Documents</a>
+            <a class="navbar-item pad-2">Directions</a>
+            <a class="navbar-item pad-2 scrollto" href="#">New Member</a>
+            <a class="navbar-item pad-2 scrollto" href="#">Gallery</a>
+            <a class="navbar-item pad-2 scrollto" href="#">Club Events</a>
+            <a class="navbar-item pad-2 scrollto" href="#">Contact Us</a>
+
+            <div class="navbar-item-fb">
+              <a class="navbar-item facebook scrollto" href="#"><img src="/assets/img/fb.svg" alt="facebook"></a>
+            </div>
+            <div class="navbar-item">
+              <a class="getstarted scrollto" href="#">Log In</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+
+  </header>
+
+  <main id="main">
+
+    <section id="hero" class="hero">
+      
+
+       <div class="container">
+          
+        <div class="columns">
+            <div class="column is-full">
+              <h1 data-aos="fade-up">PARCS</h1>
+            </div>
+          </div>
+
+          <div class="columns">
+            <div class="column is-full">
+              <h2 data-aos="fade-up">Pennsylvania Avenue Radio Control Society</h2>
+            </div>
+          </div>
+
+          <div class="columns">
+            <div class="column is-full">
+              <div class="text-center text-end">
+                <a href="#about" class="btn-get-started scrollto d-inline-flex">
+                  <span>Join Us</span>
+                  
+                </a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="menu" class="round_menu">
+      <div class="d-flex">
+        <div>
+          <div class="but_1"><img src="/assets/img/menu/but_1.svg" alt="Announcements" class="src">
+            <p>Announcements</p>
+          </div>
+        </div>
+        <div>
+          <div class="but_1"><img src="/assets/img/menu/but_2.svg" alt="News" class="src">
+            <p>News</p>
+          </div>
+        </div>
+        <div>
+          <div class="but_1"><img src="/assets/img/menu/but_3.svg" alt="Field weather" class="src">
+            <p>Field weather</p>
+          </div>
+        </div>
+        <div>
+          <div class="but_1"><img src="/assets/img/menu/but_4.svg" alt="Donations" class="src">
+            <p>Donations</p>
+          </div>
+        </div>
+        <div>
+          <div class="but_1"><img src="/assets/img/menu/but_5.svg" alt="Field phone" class="src">
+            <p>Field phone</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="wrap_bg_2">
+    <section id="field_weather" class="field_weather">
+      <div class="container">
+        <div class="columns is-centered">
+          <h1>Field weather</h1>
+         </div>
+         <div class="columns is-centered is-vcentered">
+          <span>View </span>
+          <a href="#" class="js-modal-trigger" data-target="modal-js-example"><img src="assets/img/cam_shot.svg" alt="camshot"></a>
+         </div>
+      </div>
+        <div class="columns">
+          <div class="column is-full">
+
+            <div class="wrapper">
+              <div class="widget-container">
+                <div class="top-left">
+                  <h1 class="city" id="city">Weather Widget App</h1>
+                  <h2 id="day">Day</h2>
+                  <h3 id="date">Month, Day Year</h3>
+                  <h3 id="time">Time</h3>
+                  <p class="geo"></p>
+                </div>
+                <div class="top-right">
+                  <h1 id="weather-status">Weather / Weather Status</h1>
+                  <img class="weather-icon" src="https://myleschuahiock.files.wordpress.com/2016/02/sunny2.png">
+                </div>
+                <div class="horizontal-half-divider"></div>
+                <div class="bottom-left">
+                  <h1 id="temperature">0</h1>
+                  <h2 id="celsius">&degC</h2>
+                  <h2 id="temp-divider">/</h2>
+                  <h2 id="fahrenheit">&degF</h2>
+                </div>
+                <div class="vertical-half-divider"></div>
+                <div class="bottom-right">
+                  <div class="other-details-key">
+                    <p>Wind Speed</p>
+                    <p>Humidity</p>
+                    <p>Pressure</p>
+                    <p>Sunrise Time</p>
+                    <p>Sunset Time</p>
+                  </div>
+                  <div class="other-details-values">
+                    <p class="windspeed">0 Km/h</p>
+                    <p class="humidity">0 %</p>
+                    <p class="pressure">0 hPa</p>
+                    <p class="sunrise-time">0:00 am</p>
+                    <p class="sunset-time">0:00 pm</p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+
+
+          </div>
+        </div>
+    </section>
+    <div class="wrap_bg_3">
+    <section id="gallery" class="gallery">
+
+      <div class="container">
+        <div class="columns is-centered">
+          <h1>Gallery</h1>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="columns is-centered is-desktop gallery_wraper">
+          <div class="column is-narrow align-center">
+            <a href="/"><img src="assets/img/gallery/foto_gal__1.webp" alt="foto_1"></a></div>
+          <div class="column is-narrow align-center">
+            <a href="/"><img src="assets/img/gallery/foto_gal__2.webp" alt="foto_2"></a></div>
+          <div class="column is-narrow align-center">
+            <a href="/"><img src="assets/img/gallery/foto_gal__3.webp" alt="foto_3"></a></div>
+          <div class="column is-narrow align-center">
+            <a href="/"><img src="assets/img/gallery/foto_gal__4.webp" alt="foto_4"></a></div>
+        </div>
+      
+        <div class="columns is-centered">
+          <a href="#about" class="btn-see scrollto d-inline-flex">
+            <span>See more</span>
+          </a>
+          </div>>
+    </div>
+
+    </section>
+
+  
+
+    <section id="announcements" class="announcements">
+
+      <div class="container">
+        <div class="columns is-centered">
+          <h1>Announcements</h1>
+        </div>
+      </div>
+        
+      
+      
+      <div class="container rupor">
+        <section class="article">
+          
+          <div class="columns is-desktop">
+            <div class="column is-1">
+              <div class="article__data"><a href="" class="adata">12.31</a></div>
+            </div>  
+            <div class="column is-10">
+              <div class="article__text">
+                <p>Do not fly past the cone at the south end of the field 
+                  (approximately 1000 feet from the south end of the concrete runway). 
+                  There are campsites in the bushes.
+                </p>
+              </div>
+            </div>
+          </div>  
+          
+          <div class="columns is-desktop">
+            <div class="column is-1">
+              <div class="article__data"><a href="" class="adata">12.31</a></div>
+            </div>  
+            <div class="column is-10">
+              <div class="article__text">
+                <p>Always call the field phone for the latest appointment information (718) 951-8327AIRCRAFT MODELING</p>
+              </div>
+            </div>
+          </div>   
+
+          <div class="columns is-desktop">
+            <div class="column is-1">
+              <div class="article__data"><a href="" class="adata">12.31</a></div>
+            </div>  
+            <div class="column is-10">
+              <div class="article__text">
+                <p>ACADEMY The largest aircraft modeling association in the world!<br> 
+                  Dear Member, We need your help with an urgent matter. Late last week, 
+                  the FAA unexpectedly informed us that, contrary to previous commitments to the AMA, 
+                  the agency plans to limit all recreational aircraft flights to 400 feet 
+                  in controlled airspace - with no exceptions. In addition, the FAA proposes 
+                  limiting uncontrolled airspace to altitudes that may pose safety concerns, 
+                  as well as limiting certain aircraft types altogether. We were stunned 
+                  by this proposal and resist, but we need your help...
+                </p>
+              </div>
+            </div>
+          </div>   
+
+        </section>
+      </div>
+     
+    </section>
+
+    <section id="news" class="news">
+      <div class="container">
+        <div class="columns is-centered">
+          <h1>News</h1>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column is-4 news_frame">
+            <div class="container">
+            
+            <div class="columns is-desktop">
+              <div class="column is-2">
+                <div class="article__data"><a href="" class="adata">12.31</a></div>
+              </div>  
+              <div class="column is-10">
+                <div class="article__text">
+                  <p>Field cleaning - TBD</p>
+                </div>
+              </div>
+            </div>  
+
+            <div class="columns is-desktop">
+              <div class="column is-2">
+                <div class="article__data"><a href="" class="adata">12.31</a></div>
+              </div>  
+              <div class="column is-10">
+                <div class="article__text">
+                  <p>Barbecue in open season - to be confirmed</p>
+                </div>
+              </div>
+            </div>  
+
+            <div class="columns is-desktop">
+              <div class="column is-2">
+                <div class="article__data"><a href="" class="adata">12.31</a></div>
+              </div>  
+              <div class="column is-10">
+                <div class="article__text">
+                  <p>Electric fly-in - tbdJet flight - tbd</p>
+                </div>
+              </div>
+            </div>  
+
+            <div class="columns is-desktop">
+              <div class="column is-2">
+                <div class="article__data"><a href="" class="adata">12.31</a></div>
+              </div>  
+              <div class="column is-10">
+                <div class="article__text">
+                  <p>Giant Airshow - TBD</p>
+                </div>
+              </div>
+            </div>  
+
+            <div class="columns is-desktop">
+              <div class="column is-2">
+                <div class="article__data"><a href="" class="adata">12.31</a></div>
+              </div>  
+              <div class="column is-10">
+                <div class="article__text">
+                  <p>Barbecue at the end of the season - to be confirmed</p>
+                </div>
+              </div>
+            </div>   
+
+           </div> 
+
+
+
+          <button>Read more</button>
+        </div> 
+        </div>
+
+
+      </div>
+
+    </section>
+  </div>
+
+    <section id="donations" class="donations">
+
+      <div class="container">
+        <div class="columns is-centered">
+          <h1>Donations</h1>
+        </div>
+            
+        <div class="columns is-centered">
+          <div class="column is-8 don_frame">
+          <article>
+            <header>        </header>
+            
+            <p>Donations must be paid in full by March 31, 2022. After this date, you must add a $25 late fee to your membership fee. Membership will not be accepted/renewed unless the overdue fee is included.</p>
+            <p>Please send your check along with a copy of your current AMA 2020 card, email address, contact number and self-addressed envelope to the club treasurer:</p>
+            <p>PARKSC/O Len Mackintosh51 Jesse StreetFreeport, NY 11520mcintoshl@verizon.net</p>
+            
+          </article>
+          <button>Read more</button>
+        </div> 
+        </div>
+      </div>
+
+    </section>
+
+    <section id="contact_us" class="contact_us">
+
+      <div class="container">
+        <div class="columns is-centered">
+          <h1>Contact us</h1>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="we_are_here" class="we_are_here">
+      <div class="map">
+        <img src="/assets/img/map.webp" alt="">
+      </div>
+
+    </section>
+  </main>
+</div>
+  
+<footer class="footer">
+    <div class="container">
+      <div class="columns is-vcentered">
+        
+        <div class="column is-one-third">
+          <div class="copyright">Design by Elia Volkova</div>
+        </div>
+
+        <div class="column is-one-third align-center"><img src="/assets/img/logo.svg" alt="PARCS flight field"></div>
+        
+        <div class="column is-one-third align-right">Copyright (c) 2022</div>
+      </div>
+      
+    </div>
+  </footer>
+  
+  <div id="modal-js-example" class="modal">
+    <div class="modal-background"></div>
+  
+    <div class="modal-content">
+      <div class="box">
+        <img id="cam_shot" src="http://ftp.highlifellc.com/cam/image.jpg" alt="cam_shot">
+      </div>
+    </div>
+  
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  <script type="text/javascript">
+    window.setInterval(function() {
+    var d = new Date();
+    $("#cam_shot").attr("src", "http://ftp.highlifellc.com/cam/image.jpg?"+d.getTime());
+    }, 30000);
+  </script>
+   
+    
+  <script src="assets/js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  // Functions to open and close a modal
+  function openModal($el) {
+    $el.classList.add('is-active');
+  }
+
+  function closeModal($el) {
+    $el.classList.remove('is-active');
+  }
+
+  function closeAllModals() {
+    (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+      closeModal($modal);
+    });
+  }
+
+  // Add a click event on buttons to open a specific modal
+  (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+    const modal = $trigger.dataset.target;
+    const $target = document.getElementById(modal);
+    console.log($target);
+
+    $trigger.addEventListener('click', () => {
+      openModal($target);
+    });
+  });
+
+  // Add a click event on various child elements to close the parent modal
+  (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+    const $target = $close.closest('.modal');
+
+    $close.addEventListener('click', () => {
+      closeModal($target);
+    });
+  });
+
+  // Add a keyboard event to close all modals
+  document.addEventListener('keydown', (event) => {
+    const e = event || window.event;
+
+    if (e.keyCode === 27) { // Escape key
+      closeAllModals();
+    }
+  });
+});
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+          });
+        });
+      }
+    });
+  </script>
+  
+  <!--<script src="assets/js/main.js" defer></script> -->
+</body>
+
+</html>
