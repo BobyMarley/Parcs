@@ -6,13 +6,10 @@
   <base href="/">
   <title>PARCS flight field</title>
   <meta name="description" content="PARCS flight field">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="icon" href="images/favicon.png">
-  <meta property="og:image" content="images/preview.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="assets/css/bulma/bulma.css">
-  <link rel="stylesheet" href="assets/css/main.css?ver=222">
-  <link rel="stylesheet" href="assets/css/weather.css">
+  <link rel="stylesheet" href="assets/css/main.css?ver=132">
+  <link rel="stylesheet" href="assets/css/weather.css?ver=34">
 
   <style>
     @font-face {
@@ -40,6 +37,8 @@
 </head>
 
 <body>
+
+  <!-- Header and Nav section --> 
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container">
       <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -58,35 +57,32 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-end">
-            <a class="navbar-item pad-2">Field Weather</a>
+            <a class="navbar-item pad-2" href="#field_weather">Field Weather</a>
             <a class="navbar-item pad-2">Documents</a>
             <a class="navbar-item pad-2">Directions</a>
-            <a class="navbar-item pad-2 scrollto" href="#">New Member</a>
-            <a class="navbar-item pad-2 scrollto" href="#">Gallery</a>
-            <a class="navbar-item pad-2 scrollto" href="#">Club Events</a>
-            <a class="navbar-item pad-2 scrollto" href="#">Contact Us</a>
+            <a class="navbar-item pad-2" href="#">New Member</a>
+            <a class="navbar-item pad-2" href="#gallery">Gallery</a>
+            <a class="navbar-item pad-2" href="#announcements">Club Events</a>
+            <a class="navbar-item pad-2" href="#contact_us">Contact Us</a>
 
             <div class="navbar-item-fb">
-              <a class="navbar-item facebook scrollto" href="#"><img src="/assets/img/fb.svg" alt="facebook"></a>
+              <a class="navbar-item facebook" href="#"><img src="/assets/img/fb.svg" alt="facebook"></a>
             </div>
             <div class="navbar-item">
-              <a class="getstarted scrollto" href="#">Log In</a>
+              <a class="getstarted" href="#">Log In</a>
             </div>
           </div>
         </div>
       </nav>
-
     </div>
-
   </header>
 
   <main id="main">
 
+    <!-- Hero section --> 
     <section id="hero" class="hero">
-      
-
        <div class="container">
-          
+         
         <div class="columns">
             <div class="column is-full">
               <h1 data-aos="fade-up">PARCS</h1>
@@ -101,8 +97,8 @@
 
           <div class="columns">
             <div class="column is-full">
-              <div class="text-center text-end">
-                <a href="#about" class="btn-get-started scrollto d-inline-flex">
+              <div class="align-center">
+                <a href="#about" class="btn btn-get-started scrollto d-inline-flex">
                   <span>Join Us</span>
                   
                 </a>
@@ -112,29 +108,30 @@
       </div>
     </section>
 
+    <!-- Black menu --> 
     <section id="menu" class="round_menu">
       <div class="d-flex">
-        <div>
+        <div class="but_1_hover">
           <div class="but_1"><img src="/assets/img/menu/but_1.svg" alt="Announcements" class="src">
             <p>Announcements</p>
           </div>
         </div>
-        <div>
+        <div class="but_1_hover">
           <div class="but_1"><img src="/assets/img/menu/but_2.svg" alt="News" class="src">
             <p>News</p>
           </div>
         </div>
-        <div>
+        <div class="but_1_hover">
           <div class="but_1"><img src="/assets/img/menu/but_3.svg" alt="Field weather" class="src">
             <p>Field weather</p>
           </div>
         </div>
-        <div>
+        <div class="but_1_hover">
           <div class="but_1"><img src="/assets/img/menu/but_4.svg" alt="Donations" class="src">
             <p>Donations</p>
           </div>
         </div>
-        <div>
+        <div class="but_1_hover">
           <div class="but_1"><img src="/assets/img/menu/but_5.svg" alt="Field phone" class="src">
             <p>Field phone</p>
           </div>
@@ -143,14 +140,15 @@
     </section>
     
     <div class="wrap_bg_2">
-    <section id="field_weather" class="field_weather">
+     <!-- Weather section --> 
+    <section id="field_weather" class="field_weather"> 
       <div class="container">
         <div class="columns is-centered">
           <h1>Field weather</h1>
          </div>
          <div class="columns is-centered is-vcentered">
           <span>View </span>
-          <a href="#" class="js-modal-trigger" data-target="modal-js-example"><img src="assets/img/cam_shot.svg" alt="camshot"></a>
+          <a class="js-modal-trigger" data-target="modal-camshot"><img src="assets/img/cam_shot.svg" alt="camshot"></a>
          </div>
       </div>
         <div class="columns">
@@ -167,7 +165,7 @@
                 </div>
                 <div class="top-right">
                   <h1 id="weather-status">Weather / Weather Status</h1>
-                  <img class="weather-icon" src="https://myleschuahiock.files.wordpress.com/2016/02/sunny2.png">
+                  <img class="weather-icon" src="http://openweathermap.org/img/wn/01d@4x.png">
                 </div>
                 <div class="horizontal-half-divider"></div>
                 <div class="bottom-left">
@@ -179,11 +177,11 @@
                 <div class="vertical-half-divider"></div>
                 <div class="bottom-right">
                   <div class="other-details-key">
-                    <p>Wind Speed</p>
+                    <p>Wind</p>
                     <p>Humidity</p>
                     <p>Pressure</p>
-                    <p>Sunrise Time</p>
-                    <p>Sunset Time</p>
+                    <p class="sunrise">Sunrise Time</p>
+                    <p class="sunset">Sunset Time</p>
                   </div>
                   <div class="other-details-values">
                     <p class="windspeed">0 Km/h</p>
@@ -201,178 +199,185 @@
           </div>
         </div>
     </section>
+
     <div class="wrap_bg_3">
-    <section id="gallery" class="gallery">
-
-      <div class="container">
-        <div class="columns is-centered">
-          <h1>Gallery</h1>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="columns is-centered is-desktop gallery_wraper">
-          <div class="column is-narrow align-center">
-            <a href="/"><img src="assets/img/gallery/foto_gal__1.webp" alt="foto_1"></a></div>
-          <div class="column is-narrow align-center">
-            <a href="/"><img src="assets/img/gallery/foto_gal__2.webp" alt="foto_2"></a></div>
-          <div class="column is-narrow align-center">
-            <a href="/"><img src="assets/img/gallery/foto_gal__3.webp" alt="foto_3"></a></div>
-          <div class="column is-narrow align-center">
-            <a href="/"><img src="assets/img/gallery/foto_gal__4.webp" alt="foto_4"></a></div>
+      <!-- Gallery section --> 
+      <section id="gallery" class="gallery">
+      
+        <div class="container">
+          <div class="columns is-centered">
+            <h1>Gallery</h1>
+          </div>
         </div>
       
-        <div class="columns is-centered">
-          <a href="#about" class="btn-see scrollto d-inline-flex">
-            <span>See more</span>
-          </a>
+        <div class="container">
+          <div class="columns is-centered is-desktop gallery_wraper">
+            <div class="column is-narrow align-center">
+              <a href="/"><img src="assets/img/gallery/foto_gal__1.webp" alt="foto_1"></a>
+            </div>
+            <div class="column is-narrow align-center">
+              <a href="/"><img src="assets/img/gallery/foto_gal__2.webp" alt="foto_2"></a>
+            </div>
+            <div class="column is-narrow align-center">
+              <a href="/"><img src="assets/img/gallery/foto_gal__3.webp" alt="foto_3"></a>
+            </div>
+            <div class="column is-narrow align-center">
+              <a href="/"><img src="assets/img/gallery/foto_gal__4.webp" alt="foto_4"></a>
+            </div>
+          </div>
+      
+          <div class="columns is-centered">
+            <button class="btn scrollto">See more</button>                        
           </div>>
-    </div>
-
-    </section>
-
-  
-
-    <section id="announcements" class="announcements">
-
-      <div class="container">
-        <div class="columns is-centered">
-          <h1>Announcements</h1>
         </div>
-      </div>
-        
+      </section>
       
-      
-      <div class="container rupor">
-        <section class="article">
-          
-          <div class="columns is-desktop">
-            <div class="column is-1">
-              <div class="article__data"><a href="" class="adata">12.31</a></div>
-            </div>  
-            <div class="column is-10">
-              <div class="article__text">
-                <p>Do not fly past the cone at the south end of the field 
-                  (approximately 1000 feet from the south end of the concrete runway). 
-                  There are campsites in the bushes.
-                </p>
-              </div>
-            </div>
-          </div>  
-          
-          <div class="columns is-desktop">
-            <div class="column is-1">
-              <div class="article__data"><a href="" class="adata">12.31</a></div>
-            </div>  
-            <div class="column is-10">
-              <div class="article__text">
-                <p>Always call the field phone for the latest appointment information (718) 951-8327AIRCRAFT MODELING</p>
-              </div>
-            </div>
-          </div>   
-
-          <div class="columns is-desktop">
-            <div class="column is-1">
-              <div class="article__data"><a href="" class="adata">12.31</a></div>
-            </div>  
-            <div class="column is-10">
-              <div class="article__text">
-                <p>ACADEMY The largest aircraft modeling association in the world!<br> 
-                  Dear Member, We need your help with an urgent matter. Late last week, 
-                  the FAA unexpectedly informed us that, contrary to previous commitments to the AMA, 
-                  the agency plans to limit all recreational aircraft flights to 400 feet 
-                  in controlled airspace - with no exceptions. In addition, the FAA proposes 
-                  limiting uncontrolled airspace to altitudes that may pose safety concerns, 
-                  as well as limiting certain aircraft types altogether. We were stunned 
-                  by this proposal and resist, but we need your help...
-                </p>
-              </div>
-            </div>
-          </div>   
-
-        </section>
-      </div>
-     
-    </section>
-
-    <section id="news" class="news">
-      <div class="container">
-        <div class="columns is-centered">
-          <h1>News</h1>
+      <section id="announcements" class="announcements">
+        <div class="container">
+          <div class="columns is-centered">
+            <h1>Announcements</h1>
+          </div>
         </div>
-
-        <div class="columns is-centered">
-          <div class="column is-4 news_frame">
-            <div class="container">
-            
-            <div class="columns is-desktop">
-              <div class="column is-2">
+      
+        <div class="container rupor">
+          <section class="article">
+      
+            <div class="columns is-desktop mob-cent">
+              <div class="column is-1-desktop is-12-mobile">
                 <div class="article__data"><a href="" class="adata">12.31</a></div>
-              </div>  
-              <div class="column is-10">
+              </div>
+              <div class="column is-10-desktop is-12-mobile">
+                <div class="article__text">
+                  <p>Do not fly past the cone at the south end of the field
+                    (approximately 1000 feet from the south end of the concrete runway).
+                    There are campsites in the bushes.
+                  </p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="columns is-desktop mob-cent">
+              <div class="column is-1-desktop is-12-mobile">
+                <div class="article__data"><a href="" class="adata">12.31</a></div>
+              </div>
+              <div class="column is-10-desktop is-12-mobile">
+                <div class="article__text">
+                  <p>Always call the field phone for the latest appointment information (718) 951-8327AIRCRAFT MODELING</p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="columns is-desktop mob-cent">
+              <div class="column is-1-desktop is-12-mobile">
+                <div class="article__data"><a href="" class="adata">12.31</a></div>
+              </div>
+              <div class="column is-10-desktop is-12-mobile">
+                <div class="article__text">
+                  <p>ACADEMY The largest aircraft modeling association in the world!<br>
+                    Dear Member, We need your help with an urgent matter. Late last week,
+                    the FAA unexpectedly informed us that, contrary to previous commitments to the AMA,
+                    the agency plans to limit all recreational aircraft flights to 400 feet
+                    in controlled airspace - with no exceptions. In addition, the FAA proposes
+                    limiting uncontrolled airspace to altitudes that may pose safety concerns,
+                    as well as limiting certain aircraft types altogether. We were stunned
+                    by this proposal and resist, but we need your help...
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="columns align-center">
+              <div class="column">
+                <button class="btn">Read more</button>
+              </div>
+            </div>
+            
+      
+          </section>
+        </div>
+      
+      </section>
+
+      <section id="news" class="news">
+      
+        <div class="container">
+          <div class="columns is-centered">
+            <h1>News</h1>
+          </div>
+        </div>
+      
+        <div class="columns is-centered">
+          <div class="column is-5-desktop">
+            
+        <div class="container">
+          <section class="news_frame">
+
+            <div class="columns is-desktop is-vcentered mob-cent">
+              <div class="column is-2-desktop is-12-mobile">
+                <div class="article__data"><a href="" class="adata">12.31</a></div>
+              </div>
+              <div class="column is-10-desktop is-12-mobile">
                 <div class="article__text">
                   <p>Field cleaning - TBD</p>
                 </div>
               </div>
-            </div>  
+            </div>
 
-            <div class="columns is-desktop">
-              <div class="column is-2">
+            <div class="columns is-desktop is-vcentered mob-cent">
+              <div class="column is-2-desktop is-12-mobile">
                 <div class="article__data"><a href="" class="adata">12.31</a></div>
-              </div>  
-              <div class="column is-10">
+              </div>
+              <div class="column is-10-desktop is-12-mobile">
                 <div class="article__text">
                   <p>Barbecue in open season - to be confirmed</p>
                 </div>
               </div>
-            </div>  
+            </div>
 
-            <div class="columns is-desktop">
-              <div class="column is-2">
+            <div class="columns is-desktop is-vcentered mob-cent">
+              <div class="column is-2-desktop is-12-mobile">
                 <div class="article__data"><a href="" class="adata">12.31</a></div>
-              </div>  
-              <div class="column is-10">
+              </div>
+              <div class="column is-10-desktop is-12-mobile">
                 <div class="article__text">
                   <p>Electric fly-in - tbdJet flight - tbd</p>
                 </div>
               </div>
-            </div>  
+            </div>
 
-            <div class="columns is-desktop">
-              <div class="column is-2">
+            <div class="columns is-desktop is-vcentered mob-cent">
+              <div class="column is-2-desktop is-12-mobile">
                 <div class="article__data"><a href="" class="adata">12.31</a></div>
-              </div>  
-              <div class="column is-10">
+              </div>
+              <div class="column is-10-desktop is-12-mobile">
                 <div class="article__text">
                   <p>Giant Airshow - TBD</p>
                 </div>
               </div>
-            </div>  
+            </div>
 
-            <div class="columns is-desktop">
-              <div class="column is-2">
+            <div class="columns is-desktop is-vcentered mob-cent">
+              <div class="column is-2-desktop is-12-mobile">
                 <div class="article__data"><a href="" class="adata">12.31</a></div>
-              </div>  
+              </div>
               <div class="column is-10">
                 <div class="article__text">
                   <p>Barbecue at the end of the season - to be confirmed</p>
                 </div>
               </div>
-            </div>   
+            </div>
 
-           </div> 
-
-
-
-          <button>Read more</button>
-        </div> 
-        </div>
-
-
+            <div class="columns align-center">
+              <div class="column">
+                <button class="btn">Read more</button>
+              </div>
+            </div>
+          </section>
+         </div>         
+      </section>
       </div>
-
-    </section>
-  </div>
+      </div>
+    </div>
 
     <section id="donations" class="donations">
 
@@ -380,9 +385,22 @@
         <div class="columns is-centered">
           <h1>Donations</h1>
         </div>
+       
             
         <div class="columns is-centered">
           <div class="column is-8 don_frame">
+
+            <div class="columns is-centered is-desktop">
+              <div class="column is-6-desktop is-12-mobile">
+                <img src="/assets/img/plane_ico-min.png" alt="" class="plane_icon">
+                Junior Members (Under 18s) - <strong>$62.50 </strong>
+              </div>
+              <div class="column is-6-desktop is-12-mobile">
+                <img src="/assets/img/plane_ico-min.png" alt="" class="plane_icon">
+                Junior Members (Under 18s) - <strong>$62.50 </strong>
+              </div>
+            </div>
+
           <article>
             <header>        </header>
             
@@ -391,8 +409,16 @@
             <p>PARKSC/O Len Mackintosh51 Jesse StreetFreeport, NY 11520mcintoshl@verizon.net</p>
             
           </article>
-          <button>Read more</button>
+
+          <div class="columns align-center">
+            <div class="column">
+              <button class="btn">Read more</button>
+            </div>
+          </div>
+          
         </div> 
+
+        
         </div>
       </div>
 
@@ -405,12 +431,84 @@
           <h1>Contact us</h1>
         </div>
       </div>
+      
+      <div class="container contact_us_member_div">
+        <div class="columns is-centered is-desktop mob-cent__contact_us">
+          <div class="column is-3-desktop is-12-mobile">
+            <div class="ava"><img src="/assets/img/avatars/man_ico__1-min.png" class="plane_icon"></div>
+            <div class="ava__text">President<br><strong>Ron Molaro</strong><br>airspeed917@aol.com</div>
+          </div>
+          <div class="column is-3-desktop is-12-mobile">
+            <div class="ava"><img src="/assets/img/avatars/man_ico__2-min.png" class="plane_icon"></div>
+            <div class="ava__text">Corresponding Secretary<br><strong>Dr. Sam Masir</strong><br>Sam@flyparcs.com</div>
+          </div>
+          <div class="column is-3-desktop is-12-mobile">
+            <div class="ava"><img src="/assets/img/avatars/man_ico__3-min.png" class="plane_icon"></div>
+            <div class="ava__text">Sergeant at arms<br><strong>Mike Casey</strong></div>
+          </div>
+        </div>
+
+        <div class="columns is-centered is-desktop mob-cent__contact_us">
+          <div class="column is-3-desktop is-12-mobile">
+            <div class="ava"><img src="/assets/img/avatars/man_ico__4-min.png" class="plane_icon"></div>
+            <div class="ava__text">Vice President <br><strong>Winnie Caratozzolo</strong>><br>Winnie@flyparcs.com</div>
+          </div>
+          <div class="column is-3-desktop is-12-mobile">
+            <div class="ava"><img src="/assets/img/avatars/man_ico__5-min.png" class="plane_icon"></div>
+            <div class="ava__text">Field security officer<br><strong>Joe Modicaj</strong><br>modica11214@aol.com</div>
+          </div>
+          <div class="column is-3-desktop is-12-mobile">
+            <div class="ava"><img src="/assets/img/avatars/man_ico__6-min.png" class="plane_icon"></div>
+            <div class="ava__text">Sergeant at arms <br><strong>Andrew Mele</strong></div>
+          </div>
+        </div>
+
+        <div class="columns is-centered is-desktop mob-cent__contact_us">
+          <div class="column is-3-desktop is-12-mobile">
+            <div class="ava"><img src="/assets/img/avatars/man_ico__7-min.png" class="plane_icon"></div>
+            <div class="ava__text">Treasurer<br><strong>Len Mackintosh</strong><br>mcintoshl@verizon.net</div>
+          </div>
+          <div class="column is-3-desktop is-12-mobile">
+            <div class="ava"><img src="/assets/img/avatars/man_ico__8-min.png" class="plane_icon"></div>
+            <div class="ava__text">Assistant Field Security Officer<br><strong>Leon Anastasiadi</strong><br>Anastasiadi@optonline.net</div>
+          </div>
+          <div class="column is-3-desktop is-12-mobile">
+            <div class="ava"><img src="/assets/img/avatars/man_ico__9-min.png" class="plane_icon"></div>
+            <div class="ava__text">Chief Editor<br><strong>Tone Franken</strong><br>frankentonm@gmail.com</div>
+          </div>
+        </div>
+
+        <div class="columns is-centered is-desktop mob-cent__contact_us">
+          <div class="column is-3-desktop is-12-mobile">
+            <div class="ava"><img src="/assets/img/avatars/man_ico__10-min.png" class="plane_icon"></div>
+            <div class="ava__text">Recording Secretary<br><strong>George McLean</strong><br>George@flyparcs.com</div>
+          </div>
+          <div class="column is-3-desktop is-12-mobile">
+            <div class="ava"><img src="/assets/img/avatars/man_ico__11-min.png" class="plane_icon"></div>
+            <div class="ava__text">Assistant Field Security Officer<br><strong>Andrey Doylidov</strong><br>andrew@doilidov.com</div>
+          </div>
+          <div class="column is-3-desktop is-12-mobile">
+            <div class="ava">&nbsp;</div>
+            <div class="ava__text">&nbsp;</div>
+          </div>
+          
+        </div>
+      </div>
 
     </section>
 
     <section id="we_are_here" class="we_are_here">
       <div class="map">
-        <img src="/assets/img/map.webp" alt="">
+        
+          <div class="columns align-center">
+            <div class="column is-12">
+              <span class="we_are_here__span">
+                We are here
+              </span>
+            </div>
+          </div>
+        
+        
       </div>
 
     </section>
@@ -433,7 +531,7 @@
     </div>
   </footer>
   
-  <div id="modal-js-example" class="modal">
+  <div id="modal-camshot" class="modal">
     <div class="modal-background"></div>
   
     <div class="modal-content">
@@ -477,8 +575,7 @@
   (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
     const modal = $trigger.dataset.target;
     const $target = document.getElementById(modal);
-    console.log($target);
-
+    
     $trigger.addEventListener('click', () => {
       openModal($target);
     });

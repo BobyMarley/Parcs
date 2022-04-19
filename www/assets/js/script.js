@@ -24,8 +24,7 @@ $(document).ready(function() {
   });
   
   //GEOLOCATION and WEATHER API//
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
+  
       var myLatitude = 40.601;
       var myLongitude = -73.890;
       //var utcTime = Math.round(new Date().getTime()/1000.0);
@@ -38,25 +37,25 @@ $(document).ready(function() {
         //WEATHER CONDITIONS FOUND HERE: http://openweathermap.org/weather-conditions
         switch (json.weather[0].main) {
           case "Clouds":
-            $('.weather-icon').attr("src","https://myleschuahiock.files.wordpress.com/2016/02/cloudy.png");
+            $('.weather-icon').attr("src","http://openweathermap.org/img/wn/03d@4x.png");
             break;
           case "Clear":
-            $('.weather-icon').attr("src","https://myleschuahiock.files.wordpress.com/2016/02/sunny2.png");
+            $('.weather-icon').attr("src","http://openweathermap.org/img/wn/01d@4x.png");
             break;
           case "Thunderstorm":
-             $('.weather-icon').attr("src","https://myleschuahiock.files.wordpress.com/2016/02/thunderstorm.png");
+             $('.weather-icon').attr("src","http://openweathermap.org/img/wn/11d@4x.png");
             break;
           case "Drizzle":
-             $('.weather-icon').attr("src","https://myleschuahiock.files.wordpress.com/2016/02/drizzle.png");
+             $('.weather-icon').attr("src","http://openweathermap.org/img/wn/09d@4x.png");
             break;
           case "Rain":
-             $('.weather-icon').attr("src","https://myleschuahiock.files.wordpress.com/2016/02/rain.png");
+             $('.weather-icon').attr("src","http://openweathermap.org/img/wn/10d@4x.png");
             break;
           case "Snow":
-             $('.weather-icon').attr("src","https://myleschuahiock.files.wordpress.com/2016/02/snow.png");
+             $('.weather-icon').attr("src","http://openweathermap.org/img/wn/13d@4x.png");
             break;
           case "Extreme":
-             $('.weather-icon').attr("src","https://myleschuahiock.files.wordpress.com/2016/02/warning.png");
+             $('.weather-icon').attr("src","http://openweathermap.org/img/wn/50d@4x.png");
             break;
         }
         temp = (json.main.temp -273);
@@ -74,8 +73,4 @@ $(document).ready(function() {
         // $('.sunset-time').html(json.sys.sunset);
       });
 
-    });
-  } else {
-    $("#city").html("Please turn on Geolocator on Browser.")
-  }
-});
+    }); 
